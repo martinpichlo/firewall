@@ -1,7 +1,7 @@
 
 
 # Smallest base image
-FROM archlinux:latest
+FROM base/archlinux
 
 LABEL maintainer="Zeaq <m dot pichlo at gmx dot de>"
 
