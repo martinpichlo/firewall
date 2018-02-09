@@ -16,4 +16,4 @@ ADD	https://raw.githubusercontent.com/zeaq/docker-firewall/master/start.sh \
 RUN	pacman -Syu --noconfirm wget iptables iproute2 && \
 	chmod u+x /root/*.sh
 
-CMD	["/root/start.sh"]
+ENTRYPOINT	["/root/start.sh"]
