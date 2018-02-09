@@ -5,17 +5,19 @@ Simple iptables firewall based on Arch Linux
 docker run -d --cap-add=NET_ADMIN --network=host --name firewall zeaq/docker-firewall
 
 # docker-compose
-firewall:
+docker-compose.yml:
 
-    image: zeaq/docker-firewall
+    firewall:
 
-    restart: always
+        image: zeaq/docker-firewall
 
-    cap_add:
+        restart: always
 
-        - NET_ADMIN
+        cap_add:
 
-    network_mode: host
+            - NET_ADMIN
+
+        network_mode: host
 
 
 # Build
