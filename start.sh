@@ -1,15 +1,17 @@
 #!/bin/bash
 
-_DOWN() {
+exit_script() {
     $(./root/iptables_down.sh)
-    trap - SIGTERM # clear the trap
+    trap - SIGINT SIGTERM # clear the trap
     echo "...Firewall down"
+    exit
 }
 
-trap _DOWN SIGTERM
+trap exit_script SIGINT SIGTERM
 
 echo "Start Firewall..."
 $(./root/iptables_up.sh)
 
 #other commands here
 sleep infinity
+
