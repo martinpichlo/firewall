@@ -2,7 +2,7 @@
 Simple Firewall
 
 ## Quick Start
-docker run -d --cap-add=NET_ADMIN --network=host zeaq/docker-firewall
+docker run -d --cap-add=NET_ADMIN --network=host --name firewall zeaq/docker-firewall
 
 ## Build
 docker build docker-firewall -t firewall
