@@ -9,7 +9,7 @@ ADD https://raw.githubusercontent.com/zeaq/docker-firewall/master/start.sh \
     https://raw.githubusercontent.com/zeaq/docker-firewall/master/iptables_udp.ini \
     /root/
 
-RUN pacman -Syu --noconfirm wget iptables iproute2 && \
+RUN pacman -Syu --noconfirm iptables iproute2 && \
     chmod u+x /root/*.sh
 
 ENTRYPOINT ["/root/start.sh"]
