@@ -2,11 +2,13 @@ FROM base/archlinux
 
 LABEL maintainer="Zeaq <m dot pichlo at gmx dot de>"
 
-ADD https://raw.githubusercontent.com/zeaq/docker-firewall/master/start.sh \
-    https://raw.githubusercontent.com/zeaq/docker-firewall/master/iptables_up.sh \
-    https://raw.githubusercontent.com/zeaq/docker-firewall/master/iptables_down.sh \ 
-    https://raw.githubusercontent.com/zeaq/docker-firewall/master/iptables_tcp.ini \
-    https://raw.githubusercontent.com/zeaq/docker-firewall/master/iptables_udp.ini \
+# https://raw.githubusercontent.com/zeaq/docker-firewall/master/
+
+COPY start.sh \
+    iptables_up.sh \
+    iptables_down.sh \ 
+    iptables_tcp.ini \
+    iptables_udp.ini \
     /root/
 
 RUN pacman -Syu --noconfirm iptables iproute2 && \
