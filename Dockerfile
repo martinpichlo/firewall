@@ -2,7 +2,7 @@ FROM base/archlinux
 
 LABEL maintainer="Zeaq <m dot pichlo at gmx dot de>"
 
-# https://raw.githubusercontent.com/zeaq/docker-firewall/master/
+ADD root /root
 
 COPY start.sh \
     iptables_up.sh \
