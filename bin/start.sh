@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Author: Martin Pichlo
+# Created: 08.02.2018
+
 exit_script() {
     $(iptables_down.sh)
     trap - SIGINT SIGTERM # clear the trap
@@ -11,6 +14,4 @@ trap exit_script SIGINT SIGTERM
 $(iptables_up.sh)
 $(iptables_own.sh)
 
-#other commands here
-sleep infinity
-#while :; do :; done
+while :; do :; done
