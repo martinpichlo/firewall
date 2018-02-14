@@ -7,5 +7,5 @@ ADD bin /usr/local/bin
 RUN pacman -Syu --noconfirm iptables iproute2 && \
     chmod u+x /usr/local/bin/*.sh
 
-ENTRYPOINT ["/usr/bin/start.sh"]
+ENTRYPOINT ["/usr/local/bin/start.sh"]
 
