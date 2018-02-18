@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #flush INPUT+OUTPUT chains (instead of 'iptables -F'), but leave FORWARD untouched (keeps automatic docker rules)
 iptables -F INPUT

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Author: Martin Pichlo
 # Created: 08.02.2018
