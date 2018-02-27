@@ -1,5 +1,5 @@
 # docker-firewall
-Simple iptables firewall for docker host based on Alpine Linux (tested on Arch Linux host)
+Simple iptables firewall for docker host based on Alpine Linux
 
 ## Quick Start
 command:
